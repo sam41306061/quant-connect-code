@@ -24,7 +24,7 @@ class DemoQuantConnectTest1(QCAlgorithm):
         if not self.portfolio.invested:
            if self.ticker.price > self.nema1.current.value and rsi_value < 10 :
                 self.market_order(self.ticker.symbol, 1)
-                # self.debug("Current price:"+str(self.ticker.price)+">"+" "+"MA Price:"+str(self.nema1.current.value))
+                self.debug("Current price:"+str(self.ticker.price)+">"+" "+"MA Price:"+str(self.nema1.current.value))
 
         if self.portfolio.invested:
              if self.ticker.price < self.nema1.current.value and rsi_value > 90:
